@@ -1,0 +1,8 @@
+<div class="border p-3">
+    <div class="form-group">
+      <label for="mensaje">Usuario: {{ usuario }}</label>
+      <textarea class="form-control" id="mensaje" [(ngModel)]="mensaje" placeholder="Mensaje"></textarea>
+    </div>
+    <button class="btn btn-primary mt-2" (click)="enviarMensaje()">Guardar</button>
+  </div>
+  

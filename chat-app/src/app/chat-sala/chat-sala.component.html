@@ -1,0 +1,24 @@
+<div class="border p-3">
+    <h3>Sala de Chat</h3>
+    <h4>Conversación</h4>
+    <div class="mt-4">
+        
+        @for (mensaje of mensajes; track $index) {
+          <div >
+              <strong>{{ mensaje.usuario }}:</strong> {{ mensaje.texto }}
+            </div>
+        }
+       
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <app-chat-mensaje [usuario]="'Pepe'" (nuevoMensaje)="actualizarMensajes($event)"></app-chat-mensaje>
+      </div>
+      <div class="col-md-6">
+        <app-chat-mensaje [usuario]="'María'" (nuevoMensaje)="actualizarMensajes($event)"></app-chat-mensaje>
+      </div>
+    </div>
+ 
+  </div>
+  
